@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="jumbotron text-center" style="background-color: #f2e6e6;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 border" style="background-color:#5AC18E;">
+
+                <h1 class="jumbotron-heading " style="font-family: 'Baskervville', serif; color: white;">Hi! , I'm
+                    Md Lutfor
+                    Rahman</h1>
+                <p class="animated infinite pulse delay-1s"
+                    style="font-family: 'Shadows Into Light', cursive; color: white;">
+                    I am a web developer and machine learning enthusiastic.</p>
+                <p class="animated lightSpeedIn delay-1s">
+                    <a href="mailto:lutfor15-5516@diu.edu.bd" target="_blank" style="border-right:double; padding:5px; 
+                            border-right-color: white;" title="Mail"><i class="far fa-envelope fa-2x"></i></a>
+                    <a href="https://join.skype.com/invite/jwxRxWSbJO7W" target="_blank" style="border-right:double; padding:5px; 
+                            border-right-color: white;" title="Skype"><i class="fab fa-skype fa-2x"></i></a>
+                    <a href="https://github.com/shifat151" target="_blank" style="border-right:double; padding:5px;
+                            border-right-color: white;" title="Github"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.hackerrank.com/lutfor15_5516" target="_blank" style="border-right:double; padding:5px;
+                            border-right-color: white;" title="HackerRank"><i class="fab fa-hackerrank fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/md-lutfor-rahman-917481b2" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in fa-2x"></i></i></a>
+                </p>
+
+
+            </div>
+
+            <div class="col-md-6 border" style="background-color:#5AC18E ">
+                <img src="{{ profile.pic.url }}" class="rounded-circle"  style=" margin: 2px;  border: 1px solid blue;border-radius: 3px; "
+                 alt="shifat.jpg" width="180px"
+                    height="180px">
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="content">
+
+    <div class="container">
+        <h1 class='text-center'   style="font-family: 'Roboto', sans-serif;color: #5AC18E;">About me</h1>
+        <hr>
+        <h5 style="font-family: 'Baskervville', serif; background-color: #f2e6e6; padding: 5px; 
+        margin: 2px;  border: 1px solid #5AC18E; border-radius: 3px; " >{{ profile.obj }}</h5>
+        
+        <br>
+        <h1 class='text-center'   style="font-family: 'Roboto', sans-serif; color: #5AC18E;">Skill</h1>
+        <hr>
+        <br>
+        <div class="row" style="padding-left: 5px; padding-right: 5px;">
+
+            {% for language in language %}
+            <div class="col-md-3 " style="background-color: #f2e6e6; border: 1px solid #5AC18E; border-radius: 2px; ">
+                <div class="card-group" >
+                    <div class="card  text-black border-0">
+                        <img class="card-img-top rounded-circle center" src="{{ language.image.url }}" alt="language image"
+                        style="  border: 1px solid #5AC18E;border-radius: 1px; ">
+                        <div class="card-body">
+                            <h5 class="card-title">{{language.lang_name}}</h5>
+                            <p class="card-text">{{ language.lang_summary }}</p>
+                            <h5 class="card-title">Framework</h5>
+                            {% for framework in language.framework_set.all %}
+
+                            <ul>
+                                <li>{{ framework.framework_name}}</li>
+                            </ul>
+                            {% empty %}
+                            <h6 class="card-subtitle">No framework was learned regarding this
+                                language</h6>
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            {% endfor %}
+
+        </div>
+        <br>
+
+        <h1 class='text-center' style="font-family: 'Roboto', sans-serif; color:#5AC18E;">Projects</h1>
+        <hr>
+        <br>
+        <div class="row" style="padding-left: 5px; padding-right: 5px;">
+            {% for project in project %}
+            <div class="col-md-3 " style="background-color: #f2e6e6; border: 1px solid #5AC18E; border-radius: 2px; ">
+                <div class="card-group center">
+                    <div class="card border-0">
+                        <div class="card-body">
+
+                            <div class="row align-middle">
+                                <div class="col-sm-9">
+                                    <h5 class="card-title center">{{ project.proj_title }}</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="{{project.proj_link}}" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
+                                </div>
+                            </div>
+
+                            <p class="card-text">{{ project.proj_desc }}</p>
+                            <h5 class="card-title">Framework used:</h5>
+                            {% for framework in project.frameworks.all %}
+
+                            <ul>
+                                <li>{{ framework.framework_name}}</li>
+                            </ul>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <h1 class='text-center' style="font-family: 'Roboto', sans-serif; color: #5AC18E;">Education</h1>
+        <hr>
+        <div class="row" style="background-color: #f2e6e6; padding-left: 5px; padding-right: 5px;
+         border: 1px solid #5AC18E; border-radius: 2px; ">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">GPA</th>
+                        <th scope="col">Passing year</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for academic in academic %}
+                    <tr>
+                        <td>{{ academic.exam_name }}</td>
+                        <td>{{ academic.exam_school }}</td>
+                        <td>{{ academic.exam_gpa }}</td>
+                        <td>{{ academic.exam_year}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    {% endblock %}

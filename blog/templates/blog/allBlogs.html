@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <main role="main">
+
+        <div class="container">
+            <br>
+            <h1 class="text-center pt-3" style="font-family: 'Baskervville', serif; color: black;
+             background-color: #f2e6e6;  padding: 5px; border: 1px solid #5AC18E; border-radius: 2px;">Welcome to Lutfor Rahman's Blog</h1>
+            <br />
+            <br />
+            {% if  blogs %}
+            <h2 class="text-center pt-3" style="font-family: 'Roboto', sans-serif; color: #5AC18E;">Latest Posts</h2>
+            <hr>
+            {% endif %}
+
+            {% for blog in blogs %}
+            <div class="row">
+                <a href="{% url  'detail' blog.id %}" style="color: black; text-decoration:none">
+                    <div class="card mb-3" style=" padding: 3px; max-width: 1200px; border: 1px solid #5AC18E; border-radius: 2px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="{{ blog.image.url }}" class="card-img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ blog.title }}</h5>
+                                    <p class="card-text">{{  blog.summary }}</p>
+                                    <p class="card-text"><small class="text-muted">{{ blog.pub_date_pretty }}</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {% empty %}
+            <h3 class="text-center pt-3">Sorry, no blogs published yet!</h3>
+            {% endfor %}
+
+
+
+            <hr>
+
+        </div>
+
+
+    </main>
+{% endblock %}
