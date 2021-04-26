@@ -1,0 +1,119 @@
+.jumbroton{
+    background-color: #f2e6e6;
+}
+
+.jumbroton-col{
+    background-color:#5AC18E;
+}
+
+.jumbotron-heading{
+    font-family: 'Baskervville', serif; color: white;
+}
+
+.jumbroton-about{
+    font-family: 'Shadows Into Light', cursive; color: white;
+}
+
+.jumbroton-links{
+    border-right:double;
+    padding:5px;
+    border-right-color: white;
+}
+
+.profile-image-div{
+    background-color:#5AC18E;
+}
+
+.profile-image{
+    margin: 2px;
+    border: 1px solid blue;
+    border-radius: 3px;
+}
+
+.card-group .card {
+    margin-bottom: 0px; 
+    
+}
+.tab-content{
+    padding-bottom: 10px;
+   
+}
+
+.card {
+    background-color: #f2e6e6 !important;
+ }
+
+.card-img-top {
+    margin-top:2px;
+}
+.nav-tabs{
+    border-bottom: 2px solid #5AC18E !important;
+    padding-top: 10px;
+    background-color: #f2e6e6;
+    margin-top: -1px;
+}
+.nav-tabs .nav-link{
+    color: #495057;
+}
+.nav-tabs .nav-link.active {
+    color: #495057 !important;
+    font-weight: bold;
+    background-color: #5AC18E !important;
+    border-color:#5AC18E !important;
+}
+.nav-tabs .nav-link:hover {
+    background-color: #5AC18E;
+    font-weight: bold;
+}
+
+.skill-box-small{
+
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px 50px 0px 0px;
+    background-color: #f2e6e6;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    text-align:center;
+    padding: 1rem;
+    width:10rem;
+    height:3rem;
+
+}
+
+.card-column{
+    padding:2px 1px !important;
+}
+
+.card-group{
+    min-height: 100% !important;
+}
+
+.card-img-top{
+    border: 1px solid #5AC18E;
+    border-radius: 1px; 
+}
+
+
+
+.skill-box-small-text{
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+.skill-box{
+    background-color: #f2e6e6;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0px 0px 50px;
+}
+
+
+
+.academic-box{
+    background-color: #f2e6e6;
+    color: #000;
+    border-radius: 0px 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    margin-top: -1px;
+    margin-bottom: 50px;
+}

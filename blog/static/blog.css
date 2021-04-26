@@ -1,0 +1,47 @@
+.blog-headline{
+    font-family: 'Baskervville', serif; color: black;
+    background-color: #f2e6e6;
+    padding: 5px;
+    border: 1px solid #5AC18E;
+    border-radius: 2px;
+
+}
+
+.blog-latest{
+    font-family: 'Roboto',sans-serif;
+    color: #5AC18E;
+}
+
+.blog-link{
+    color: black !important;
+    text-decoration:none !important;
+}
+
+.blog-card{
+    padding: 3px !important;
+    max-width: 1200px !important;
+    border: 1px solid #5AC18E !important;
+    border-radius: 2px !important;
+}
+
+.blog-title{
+    font-family: 'Baskervville', serif;
+    color: black;
+    background-color: #f2e6e6;
+    padding: 5px;
+    border: 1px solid #5AC18E;
+}
+
+.blog-date{
+    font-family: 'Roboto', sans-serif;
+    color: #5AC18E;
+}
+
+.blog-image{
+    display:block;
+    margin:auto;
+}
+
+.blog-other-link{
+    font-family: 'Modak', cursive;
+}

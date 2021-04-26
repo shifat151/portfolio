@@ -1,16 +1,24 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
 
 <head>
-    {% load static %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Hi! , I'm Md Lutfor Rahman.
      I am a web developer and machine learning enthusiast">
-     <meta name="keywords" content="shifat75,shifat151,lutfor15-5516,shifat151@gmail.com,Md Lutfor Rahman">
-     <meta name="author" content="Md Lutfor Rahman">
+    <meta name="keywords" content="shifat75,shifat151,lutfor15-5516,shifat151@gmail.com,Md Lutfor Rahman">
+    <meta name="author" content="Md Lutfor Rahman">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}"">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
     <title>Md Lutfor Rahman</title>
+    {% block css %}
+
+    {% endblock %}
 
 
     <!-- Bootstrap core CSS -->
@@ -30,7 +38,7 @@
 
 
 
-    <nav class="navbar navbar-expand-lg  sticky-top navbar-light" style="background-image: linear-gradient(to left bottom, #5ac18e, #39af92, #1c9d92, #0e8b8d, #187884);">
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-company-red">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Md Lutfor Rahman</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -54,7 +62,7 @@
     <br>
     <footer class="text-muted">
         <div class="container text-center">
-            <p class="footer-text" style="color: black; font-family: 'Playfair Display', serif;"> &copy; Md Lutfor Rahman {% now "Y" %}
+            <p class="footer-text"> &copy; Md Lutfor Rahman {% now "Y" %}
             </p>
         </div>
     </footer>
