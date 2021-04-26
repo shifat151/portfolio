@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock%}
+{% block content %}
+
+<div class="container">
+    <div class="row resume-cont align-items-center">
+
+        <div class="col-md-12">
+            <iframe id="pdf" src="{% static 'cv.pdf' %}"></iframe>
+
+
+        <h5 id="pdf-notice">Your web browser doesn't have a PDF plugin.
+            Instead you can click <a href="{% static 'cv.pdf' %}">here</a> to
+            download the Resume.</h5>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block js%}
+<script src="{% static 'resume.js' %}"></script>
+{% endblock %}
