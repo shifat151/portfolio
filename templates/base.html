@@ -19,29 +19,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-    <style>
-        /* .bg-company-red {
-            background-color:#417690 !important;
-            
-        } */
-
-        .bg-company-red a {
-            font-size: large !important;
-        }
-
-        .card {
-            background-color: #f2e6e6;
-        }
-
-        .card-img-top {
-            margin-top:2px;
-            /* width: 250px;
-        height: 230px;
-        object-fit: cover; */
-
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
     <!-- Custom styles for this template -->
 
 </head>
@@ -52,7 +30,7 @@
 
 
 
-    <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-company-red" style="background-color:#5AC18E;">
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-light" style="background-image: linear-gradient(to left bottom, #5ac18e, #39af92, #1c9d92, #0e8b8d, #187884);">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Md Lutfor Rahman</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -76,7 +54,7 @@
     <br>
     <footer class="text-muted">
         <div class="container text-center">
-            <p style="color: black; font-family: 'Playfair Display', serif;"> &copy; Md Lutfor Rahman {% now "Y" %}
+            <p class="footer-text" style="color: black; font-family: 'Playfair Display', serif;"> &copy; Md Lutfor Rahman {% now "Y" %}
             </p>
         </div>
     </footer>

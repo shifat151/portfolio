@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -7,16 +8,16 @@ from django.db import models
 class Blog(models.Model):
     title=models.CharField(max_length=255)
     pub_date=models.DateTimeField()
-    body=models.TextField()
+    description = RichTextField(verbose_name='Job Description')
     image=models.ImageField(upload_to='images/',blank=True)
     blog_url=models.URLField(blank=True)
     short_body=[]
 
 
     def summary(self):
-        self.short_body=self.body.split()
+        self.short_body=self.description.split()
         if len(self.short_body)<100:
-            return self.body
+            return self.description
         else:
             return ' '.join(self.short_body[:100])+'.....'
             

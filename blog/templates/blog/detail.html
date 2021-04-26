@@ -19,7 +19,7 @@
                     <br>
                     <br>
                     <br>
-                    <p style="font-size: large;">{{  blog.body }}</p>
+                    <p style="font-size: large;">{{ blog.description|safe }}</p>
                     <br>
                     {% if  blog.blog_url %}
                     <div class="link-class">
