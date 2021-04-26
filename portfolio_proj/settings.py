@@ -169,8 +169,8 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'static')
 ]
 # STATIC_ROOT is the folder where static files will be stored after using manage.py collectstatic
-#Not required during development
-# STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
+# Not required during development
+STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')

@@ -1,0 +1,21 @@
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.bg-company-red{
+    background-image: linear-gradient(to left bottom, #5ac18e, #39af92, #1c9d92, #0e8b8d, #187884);
+}
+
+.bg-company-red a {
+    font-size: large !important;
+    
+}
+
+.footer-text{
+    color: black; font-family: 'Playfair Display', serif;
+}
+
+
+
