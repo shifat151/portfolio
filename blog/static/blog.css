@@ -1,6 +1,6 @@
 .blog-headline{
     font-family: 'Baskervville', serif; color: black;
-    background-color: #f2e6e6;
+    background-color: #e9ecef;
     padding: 5px;
     border: 1px solid #5AC18E;
     border-radius: 2px;
@@ -27,7 +27,7 @@
 .blog-title{
     font-family: 'Baskervville', serif;
     color: black;
-    background-color: #f2e6e6;
+    background-color: #e9ecef;
     padding: 5px;
     border: 1px solid #5AC18E;
 }
