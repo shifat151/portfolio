@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'skin': 'moono',
         'toolbar_YourCustomToolbarConfig': [
             {'name': 'document', 'items': ['Source', '-', 'Templates']},
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
