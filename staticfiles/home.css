@@ -117,3 +117,20 @@
     margin-top: -1px;
     margin-bottom: 50px;
 }
+
+.resume-cont{
+    min-height: 75vh;
+    padding-top: 5px;
+}
+
+#pdf{
+    height: 80vh; width: 100%;
+
+}
+
+#pdf-notice{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    border: 1px solid #5AC18E;
+    padding: 5px;
+}
