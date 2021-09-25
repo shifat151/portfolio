@@ -9,7 +9,7 @@ verify_ssl = true
 django = "*"
 pillow = "*"
 python-decouple = "*"
-django-ckeditor = "==6.0.0"
+django-ckeditor = "*"
 
 [requires]
 python_version = "3.7"

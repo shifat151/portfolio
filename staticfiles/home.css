@@ -4,6 +4,7 @@
 
 .jumbroton-col{
     background-color:#5AC18E;
+    overflow-x: hidden;
 }
 
 .jumbotron-heading{
@@ -134,3 +135,43 @@
     border: 1px solid #5AC18E;
     padding: 5px;
 }
+
+
+
+
+
+@media (max-width: 575.98px) {
+
+    #academic-scroll{
+        overflow-x: scroll;
+    
+    }
+    #academic-scroll::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.2rem;
+    }
+     
+
+    #academic-scroll::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #academic-scroll::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #5AC18E; 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+
+        
+
+    
+}
+
+
+    
+

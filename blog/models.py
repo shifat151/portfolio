@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
@@ -8,11 +9,13 @@ from ckeditor.fields import RichTextField
 class Blog(models.Model):
     title=models.CharField(max_length=255)
     pub_date=models.DateTimeField()
-    description = RichTextField(verbose_name='Job Description')
-    image=models.ImageField(upload_to='images/',blank=True)
+    description = RichTextUploadingField(verbose_name='Job Description')
+    image=models.ImageField(upload_to='images/')
     blog_url=models.URLField(blank=True)
     short_body=[]
 
+    class Meta:
+        ordering=["-pub_date"]
 
     def summary(self):
         self.short_body=self.description.split()
