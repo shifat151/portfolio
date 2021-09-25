@@ -9,7 +9,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Blog(models.Model):
     title=models.CharField(max_length=255)
     pub_date=models.DateTimeField()
-    description = RichTextUploadingField(verbose_name='Job Description')
+    description = RichTextUploadingField()
     image=models.ImageField(upload_to='images/')
     blog_url=models.URLField(blank=True)
     short_body=[]
