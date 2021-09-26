@@ -19,10 +19,10 @@ class Blog(models.Model):
 
     def summary(self):
         self.short_body=self.description.split()
-        if len(self.short_body)<100:
+        if len(self.short_body)<20:
             return self.description
         else:
-            return ' '.join(self.short_body[:100])+'.....'
+            return ' '.join(self.short_body[:20])+'.....'
             
 
     def pub_date_pretty(self):
