@@ -1,0 +1,1 @@
+$( ".blog-column img" ).addClass( "img-fluid" );

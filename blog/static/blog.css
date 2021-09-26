@@ -45,3 +45,8 @@
 .blog-other-link{
     font-family: 'Modak', cursive;
 }
+
+.blog-column div p{
+    word-wrap: break-word;
+}
+

@@ -5,10 +5,13 @@
 {% endblock%}
 {% block content %}
 
-    <main role="main">
+    <main role="blog-main">
 
         <div class="container">
 
+            <div class="row">
+
+                <div class="col-12 blog-column">
                     <br>
                     <br>
 
@@ -31,9 +34,21 @@
                     <br>
                     <hr> 
 
+                </div>
+                
+            </div>
+
+                    
+
         </div>
+
         
         
     </main>
 
+
+{% endblock %}
+
+{% block js%}
+<script src="{% static 'blog.js' %}"></script>
 {% endblock %}
